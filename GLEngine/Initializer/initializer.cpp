@@ -56,8 +56,8 @@ void initializer::Create()
 	bSplines->CreateBSplineSurface(UResolution, VResolution, Du, Dv, uKnot, vKnot, controlPoints);
 
 	pCloud = std::make_shared<PointCloud>();
-	std::string directory = "C:/Skole/Visualisering og Simulering/Engine/GLEngine/GLEngine/ReadableFiles/Budor/Converted.txt";
-	pCloud->CreatePointCloudFromFile(directory.c_str(), 1.0);
+	std::string directory = "C:/Skole/Visualisering og Simulering/VisSim_Compulsory_2/GLEngine/ReadableFiles/Budor/32-2-519-158-01.txt";
+	pCloud->CreatePointCloudFromFile(directory.c_str(), 0.001f);
 	//Spheres Sphere;
 	//Sphere.CreateSphere(glm::vec3(0.25f),4.f, glm::vec3(15.25f, 0.75f, 2.5f), 1.f,glm::vec3(0.f, 0.f, 0.f),Color::Gold);
 	//Sphere.AddCollider(Sphere.GetScale(), ECollisionType::ball);
