@@ -58,6 +58,7 @@ void initializer::Create()
 	pCloud = std::make_shared<PointCloud>();
 	std::string directory = "C:/Skole/Visualisering og Simulering/VisSim_Compulsory_2/GLEngine/ReadableFiles/Budor/32-2-519-158-01.txt";
 	pCloud->CreatePointCloudFromFile(directory.c_str(), 0.001f);
+		
 	//Spheres Sphere;
 	//Sphere.CreateSphere(glm::vec3(0.25f),4.f, glm::vec3(15.25f, 0.75f, 2.5f), 1.f,glm::vec3(0.f, 0.f, 0.f),Color::Gold);
 	//Sphere.AddCollider(Sphere.GetScale(), ECollisionType::ball);
@@ -84,7 +85,7 @@ void initializer::Run()
 	//std::string read =" ../../GLEngine/ReadableFiles/Budor/32-2-519-158-00.laz";
 	//std::string write =" ../../GLEngine/ReadableFiles/output.txt";
 	//MathFunctions::LASFileToCustomFileOfPoints(read.c_str(), write.c_str());
-	float FirstFrame = 0.0f;
+ 	float FirstFrame = 0.0f;
 	glm::vec3 color(Color::Grey);
 
 	glEnable(GL_DEPTH_TEST);

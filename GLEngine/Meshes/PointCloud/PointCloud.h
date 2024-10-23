@@ -1,7 +1,7 @@
 #pragma once
 #include "../Mesh.h"
 
-class PointCloud : Mesh
+class PointCloud : public Mesh
 {
 public:
 	PointCloud(){};
