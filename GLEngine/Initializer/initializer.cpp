@@ -59,29 +59,29 @@ void initializer::Create()
 	std::string directory = "ReadableFiles/Budor/32-2-519-158-01.txt";
 	pCloud->CreatePointCloudFromFile(directory.c_str(), 0.01f);
 		
-	//Spheres Sphere;
-	//Sphere.CreateSphere(glm::vec3(0.25f),4.f, glm::vec3(15.25f, 0.75f, 2.5f), 1.f,glm::vec3(0.f, 0.f, 0.f),Color::Gold);
-	//Sphere.AddCollider(Sphere.GetScale(), ECollisionType::ball);
+	Spheres Sphere;
+	Sphere.CreateSphere(glm::vec3(0.25f),4.f, glm::vec3(15.25f, 0.75f, 2.5f), 1.f,glm::vec3(0.f, 0.f, 0.f),Color::Gold);
+	Sphere.AddCollider(Sphere.GetScale(), ECollisionType::ball);
 
-	///* Creating the balls */
-	//Spheres kule;
-	//kule.CreateSphere(glm::vec3(0.25f),4.f, glm::vec3(15.f, 0.75f, 7.5f), 1.f,glm::vec3(0.f, 0.f, 0.f),Color::Gold);
-	//kule.AddCollider(kule.GetScale(), ECollisionType::ball);
-
+	/* Creating the balls */
+	Spheres kule;
+	kule.CreateSphere(glm::vec3(0.25f),4.f, glm::vec3(15.f, 0.75f, 7.5f), 1.f,glm::vec3(0.f, 0.f, 0.f),Color::Gold);
+	kule.AddCollider(kule.GetScale(), ECollisionType::ball);
 	
 	Cubes.emplace_back(Floor);
 	Cubes.emplace_back(Wall);
 	Cubes.emplace_back(Wall2);
 	Cubes.emplace_back(Wall3);
 	Cubes.emplace_back(Wall4);
-	/*Balls.push_back(kule);*/
-	//Balls.push_back(Sphere);
+	Balls.push_back(kule);
+	Balls.push_back(Sphere);
 
 }
 
 void initializer::Run()
 {
 	Create();
+	/* Prøve å fikses .laz reader */
 	//std::string read =" ../../GLEngine/ReadableFiles/Budor/32-2-519-158-00.laz";
 	//std::string write =" ../../GLEngine/ReadableFiles/output.txt";
 	//MathFunctions::LASFileToCustomFileOfPoints(read.c_str(), write.c_str());
